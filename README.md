@@ -17,3 +17,11 @@ Use sample.csv to import users
     GET usres by setting offset
 5. localhost:8080/users?sort=SALARY GET\
     GET users by sorting by NAME or SALARY
+
+## Test Cases
+1. If the csv file format is not correct, for example, salary is not a valid double, it will return\
+{
+  "Message": "CSV is in wrong format",
+  "Success": 0
+}
+
