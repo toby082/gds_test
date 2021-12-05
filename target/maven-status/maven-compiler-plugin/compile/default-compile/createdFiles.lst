@@ -1,0 +1,10 @@
+com/example/demo/service/FileUploadService.class
+com/example/demo/repository/EmployeesRepository.class
+com/example/demo/service/EmployeeService.class
+com/example/demo/DemoApplication.class
+com/example/demo/domain/Employees.class
+com/example/demo/resources/FileUploadResource.class
+com/example/demo/repository/OffsetBasedPageRequest.class
+com/example/demo/dto/FileUploadDTO.class
+com/example/demo/dto/EmployeeDTO.class
+com/example/demo/resources/EmployeeResource.class
