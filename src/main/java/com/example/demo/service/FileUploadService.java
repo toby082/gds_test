@@ -43,7 +43,7 @@ public class FileUploadService {
         }
     }
 
-    // Vlidate CSV data santity
+    // Validate CSV data format
     public Boolean validate(FileUploadDTO file){
         log.info("validate csv file before saving data into DB");
         try {
