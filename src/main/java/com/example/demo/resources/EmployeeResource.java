@@ -25,13 +25,7 @@ public class EmployeeResource {
         return new ResponseEntity<>(employees, HttpStatus.OK);
     }
 
-    @GetMapping("/users")
-    public ResponseEntity<?> getEmps(){
-        List<Employees> employees = employeeService.getEmployees();
-        return new ResponseEntity<>(employees, HttpStatus.OK);
-    }
-
-    @RequestMapping(method = RequestMethod.GET, value = "/usres")
+    @RequestMapping(method = RequestMethod.GET, value = "/users")
     public ResponseEntity<?> controllerMethod(@RequestParam Map<String, String> customQuery) {
 
         if(customQuery.get("min") != null && customQuery.get("max") == null) {
@@ -54,12 +48,12 @@ public class EmployeeResource {
             return new ResponseEntity<>(employees, HttpStatus.OK);
         }
 
-        if ( customQuery.get("sort") == "NAME"){
+        if ( customQuery.containsKey("sort") && customQuery.get("sort").equals("NAME")){
             List<Employees> employees = employeeService.getEmployeesSortByName();
             return new ResponseEntity<>(employees, HttpStatus.OK);
         }
 
-        if ( customQuery.get("sort") == "SALARY"){
+        if ( customQuery.containsKey("sort") && customQuery.get("sort").equals("SALARY")){
             List<Employees> employees = employeeService.getUsersSortBySalary();
             return new ResponseEntity<>(employees, HttpStatus.OK);
         }
